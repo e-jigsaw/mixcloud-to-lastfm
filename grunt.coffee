@@ -8,9 +8,14 @@ module.exports = (grunt)->
 					"grunt.js": ["grunt.coffee"]
 				options:
 					bare: true
-	watch:
-			files: ["grunt.coffee", "*.jade"]
-			tasks: "coffee jade"
+			scrobble:
+				files:
+					"scrobble.js": ["config.coffee", "scrobble.coffee"]
+				options:
+					bare: true
+		watch:
+			files: ["*.coffee"]
+			tasks: "coffee"
 
 		grunt.loadNpmTasks "grunt-coffee"
 		grunt.loadNpmTasks "grunt-contrib"

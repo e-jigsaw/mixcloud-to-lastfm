@@ -1,0 +1,23 @@
+{
+	"name": "mixcloud-to-lastfm",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"description": "lastfm scrobbler for mixcloud",
+	"content_scripts": [
+		{
+			"matches": [
+				"http://www.mixcloud.com/*",
+				"https://www.mixcloud.com/*"
+			],
+			"js": [
+				"jquery-1.9.0.min.js",
+				"scrobble.js"
+			],
+			"run_at": "document_idle"
+		}
+	],
+	"permissions": [
+		"http://universalscrobbler.invitationstation.org/*",
+		"https://universalscrobbler.invitationstation.org/*"
+	]
+}
