@@ -12,7 +12,6 @@ module.exports = (grunt)->
 			files: ["*.coffee"]
 			tasks: "coffee"
 
-		grunt.loadNpmTasks "grunt-coffee"
 		grunt.loadNpmTasks "grunt-contrib"
 
 		grunt.registerTask "default", "watch"
