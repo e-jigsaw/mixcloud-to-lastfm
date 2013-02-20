@@ -18,5 +18,5 @@ $(document).ready ->
 					$(self).text "Success!"
 				else
 					$(self).text "Try Again"
-					console.log data
+					$(self).attr "disabled", false
 			
