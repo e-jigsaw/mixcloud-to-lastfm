@@ -2,16 +2,15 @@
 	"name": "mixcloud-to-lastfm",
 	"version": "0.0.1",
 	"engines": {
-		"node": "0.8.14",
-		"npm": "1.1.65"
+		"node": "0.8.19",
+		"npm": "1.2.10"
 	},
 	"dependencies": {
 		"coffee-script": "1.4.0",
-		"grunt": "0.3.17",
-		"grunt-coffee": "0.0.6",
-		"grunt-contrib": "0.3.0"
+		"grunt": "0.4.0",
+		"grunt-contrib": "0.4.0"
 	},
 	"scripts": {
-		"start": "coffee -b -c grunt.coffee; grunt coffee"
+		"start": "grunt coffee"
 	}
 }
