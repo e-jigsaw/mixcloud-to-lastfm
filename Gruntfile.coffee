@@ -5,7 +5,7 @@ module.exports = (grunt)->
 		coffee:
 			scrobble:
 				files:
-					"scrobble.js": ["config.coffee", "scrobble.coffee"]
+					"pkg/scrobble.js": ["config.coffee", "scrobble.coffee"]
 				options:
 					bare: true
 		watch:

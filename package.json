@@ -1,6 +1,6 @@
 {
 	"name": "mixcloud-to-lastfm",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"node": "0.8.19",
 		"npm": "1.2.10"
