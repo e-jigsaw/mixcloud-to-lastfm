@@ -2,11 +2,11 @@ $(document).ready ->
 	$(".tracklistcell").each ->
 		$(this).append "<button class='lastfm-scrobble'>scrobble</button>"
 		$(".lastfm-scrobble:last").on "click", (e)->
-			self = this
+			button = $(this)
 			trackname = $(e.target.parentNode).find(".tracklisttrackname").text()
 			artistname = $(e.target.parentNode).find(".tracklistartistname").text()
-			$(self).attr "disabled", true
-			$(self).text "Progress..."
+			button.attr "disabled", true
+			button.text "Progress..."
 			$.get "http://universalscrobbler.invitationstation.org/scrobble.php"
 				submissionType: "track"
 				username: USERNAME
@@ -15,8 +15,8 @@ $(document).ready ->
 				track: trackname
 			, (data)->
 				if data.success is 1
-					$(self).text "Success!"
+					button.text "Success!"
 				else
-					$(self).text "Try Again"
-					$(self).attr "disabled", false
+					button.text "Try Again"
+					button.attr "disabled", false
 			
